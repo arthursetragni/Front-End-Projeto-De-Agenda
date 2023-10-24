@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <div id='calendar'>
+    <button id='btnAddEvent' onclick="abrir()">+</button>
+    <dialog class="dialog">
+      <button class="botao-fechar" onclick="fechar()">X</button>
+      <div class="container">
+        <h4>Titulo</h4>
+        <input type="text" class="form-control" placeholder="Adicione o título" aria-label="Adicione o título"
+          id="titulo">
+      </div>
+      <div class="container" id="evento">
+        <h4>Inicio</h4>
+        <input type="date" class="form-control" id="dataInicio">
+        <input type="time" class="form-control" id="horaInicio">
+      </div>
+      <div class="container">
+        <h4>Fim</h4>
+        <input class="form-control" type="date" id="dataFim">
+        <input type="time" class="form-control" id="horaFim">
+      </div>
+      <div class="container">
+        <h4>Descrição</h4>
+        <textarea class="form-control" id="descricao"></textarea>
+      </div>
+
+      <button class="botao-salvar" id="salvar" onclick="salvarDados()">Salvar</button>
+    </dialog>
+  </div>
+</body>
+
+</html>
